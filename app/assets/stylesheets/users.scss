@@ -1,0 +1,27 @@
+.AccountPage {
+  display: flex;
+  align-items: center;
+  background-image: url("images/typewriter.jpg");
+
+  .AccountPageField {
+    height: 500px;
+    width: 400px;
+    background-color: rgba(219,219,219,0.5);
+    margin: 0 auto;
+
+    .AccountPageField__Title {
+      height: 40px;
+      width: 150px;
+      .h1 {
+        font-family:'southpawregular';
+        font-size: 30px;
+      }
+    }
+
+    .AccountPageField__contents {
+      height: 60%;
+      width: 70%;
+      
+    }
+  }
+}
