@@ -3,6 +3,8 @@
 }
 
 .wrapper {
+  height: 100vh;
+  width: 100vw;
 
   .Header {
     display: flex;
@@ -10,27 +12,150 @@
     height: 50px;
     width: 100vw;
     background-color: red;
+    padding: 5px 20px;
 
-    .SiteTitle {
+    .TitleSearch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       height: 40px;
-      width: 80px;
-      background-color: blue;
+      width: 400px;
+      background-color: cornflowerblue;
 
-      .Contents {
+      .SiteTitle {
         height: 40px;
         width: 200px;
-        background-color: brown;
+        background-color: ivory;
+        font-family: 'southpawregular';
+      }
 
-        &__content {
-          height: 20px;
-          width: 40px;
-          background-color: chartreuse;
+      .SearchBox {
+        height: 25px;
+        width: 180px;
+        background-color: yellow;
+      }
+    }
 
-          &__user {
-            background-color: coral;
-          }
-        }
+    .Contents {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      width: 620px;
+      background-color: brown;
+
+      .content {
+        height: 25px;
+        width: 130px;
+        background-color: chartreuse;
+        margin-left: 20px;
+      }
+
+      .user {
+        height: 25px;
+        width: 130px;
+        background-color: coral;
+        margin-left: 20px;
       }
     } 
+  }
+
+  .Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 85px);
+    width: 100vw;
+    background-color: darkgray;
+    padding: 40px;
+
+    .Post {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 560px;
+      width: 1300px;
+      background-color: lime;
+
+      .MoreTag {
+        display: flex;
+        justify-content: center;
+        .Tag {
+          height: 500px;
+          width: 150px;
+          background-color: darkmagenta;
+          margin-right: 20px;
+        }
+        .More {
+          height: 300px;
+          width: 30px;
+          background-color: darksalmon;
+          margin-right: 10px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+        }
+      }
+
+      .Text {
+        height: 500px;
+        width: 880px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        overflow: hidden;
+      }
+
+      .DataBox {
+        height: 500px;
+        width: 50px;
+        background-color: dodgerblue;
+        margin-left: 20px;
+        .Title {
+          height: 200px;
+          width: 50px;
+          background-color: ghostwhite;
+          margin-left: auto;
+          margin-right: auto;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+        }
+        .WriterName {
+          height: 150px;
+          width: 40px;
+          background-color: gold;
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+        }
+        .Likes {
+          height: 30px;
+          width: 30px;
+          background-color: greenyellow;
+          margin-top: 10px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .Comments {
+          height: 30px;
+          width: 30px;
+          background-color: lightblue;
+          margin-top: 5px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .Footer {
+    height: 35px;
+    width: 100vw;
+    background-color: lightskyblue;
+    text-align: center;
+    line-height: 35px;
   }
 }
