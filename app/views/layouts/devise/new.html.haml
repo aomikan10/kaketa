@@ -1,0 +1,9 @@
+
+%h1 kaketa.
+  = form_with model: @user do |f|
+        = f.label :name
+        = f.text_field :name, autofocus: true
+      = f.submit "Join us!", class: 'Button UserButton'
+
+    ©︎ 2020 kaketa from Mika.F
+
