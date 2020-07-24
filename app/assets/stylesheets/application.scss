@@ -1,10 +1,4 @@
 @import "reset";
 @import "messages";
-@font-face {
-  font-family: 'southpawregular';
-  src: url('southpaw-webfont.eot');
-  src: url('southpaw-webfont.eot?#iefix') format('embedded-opentype'),
-       url('southpaw-webfont.woff') format('woff'),
-       url('southpaw-webfont.ttf') format('truetype'),
-       url('southpaw-webfont.svg#southpawregular') format('svg');
-}
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Jura:wght@300&display=swap');
