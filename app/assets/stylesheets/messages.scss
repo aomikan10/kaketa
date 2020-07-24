@@ -11,7 +11,6 @@
     justify-content: space-between;
     height: 50px;
     width: 100vw;
-    background-color: red;
     padding: 5px 40px;
 
     .TitleSearch {
@@ -19,7 +18,7 @@
       align-items: center;
       justify-content: space-between;
       height: 40px;
-      width: 400px;
+      width: 300px;
       background-color: cornflowerblue;
 
       .SiteTitle {
@@ -42,18 +41,16 @@
       display: flex;
       align-items: center;
       height: 40px;
-      background-color: brown;
 
       .content {
-        background-color: chartreuse;
-        margin-left: 20px;
+        margin-left: 40px;
         font-family: 'Caveat', cursive;
         font-family: 'Jura', sans-serif;
       }
 
       .user {
-        background-color: coral;
-        margin-left: 20px;
+        margin-left: 40px;
+        color: #dc143c;
         font-family: 'Caveat', cursive;
         font-family: 'Jura', sans-serif;
       }
@@ -72,81 +69,113 @@
     .Post {
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 560px;
-      width: 1300px;
-      background-color: lime;
+      height: 500px;
+      width: 1200px;
+      background-color: white;
+      padding: 20px;
 
       .MoreTag {
         display: flex;
         justify-content: center;
-        .Tag {
-          height: 500px;
-          width: 150px;
-          background-color: darkmagenta;
+        .Tags {
+          height: 300px;
+          width: 130px;
           margin-right: 20px;
+          font-size: 13px;
+          //background-color: yellow;
+          font-family: 'Kosugi Maru', sans-serif;
+          line-height: 25px;
+          .Tag {
+            height: 17px;
+            margin-bottom: 5px;
+            padding: 2px;
+            color: #dc143c;
+            text-align: center;
+            line-height: 17px;
+          }
         }
         .More {
           height: 300px;
           width: 30px;
-          background-color: darksalmon;
           margin-right: 10px;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          //background-color: yellowgreen;
+      
         }
       }
 
       .Text {
-        height: 500px;
-        width: 880px;
+        height: 450px;
+        width: 850px;
+        font-size: 22px;
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
         overflow: hidden;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        //background-color: teal;
+        line-height: 40px;
       }
 
       .DataBox {
-        height: 500px;
+        height: 400px;
         width: 50px;
-        background-color: dodgerblue;
-        margin-left: 20px;
+        margin-left: 40px;
+        //background-color: thistle;
         .Title {
-          height: 200px;
+          height: 150px;
           width: 50px;
-          background-color: ghostwhite;
           margin-left: auto;
           margin-right: auto;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          font-size: 30px;
+          line-height: 50px;
+          //background-color: tomato;
+      
         }
         .WriterName {
           height: 150px;
           width: 40px;
-          background-color: gold;
-          margin-top: 40px;
+          margin-top: 20px;
           margin-left: auto;
           margin-right: auto;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          line-height: 40px;
+          font-size: 20px;
+          //background-color: wheat;
         }
         .Likes {
           height: 30px;
           width: 30px;
-          background-color: greenyellow;
           margin-top: 10px;
           margin-left: auto;
           margin-right: auto;
+          //background-color: tan;
         }
         .Comments {
           height: 30px;
           width: 30px;
-          background-color: lightblue;
           margin-top: 5px;
           margin-left: auto;
           margin-right: auto;
+          //background-color: skyblue;
         }
       }
     }
