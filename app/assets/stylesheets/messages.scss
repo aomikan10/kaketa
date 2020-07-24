@@ -12,7 +12,7 @@
     height: 50px;
     width: 100vw;
     background-color: red;
-    padding: 5px 20px;
+    padding: 5px 40px;
 
     .TitleSearch {
       display: flex;
@@ -26,7 +26,9 @@
         height: 40px;
         width: 200px;
         background-color: ivory;
-        font-family: 'southpawregular';
+        font-family: 'Caveat', cursive;
+        font-size: 40px;
+        line-height: 40px;
       }
 
       .SearchBox {
@@ -40,21 +42,20 @@
       display: flex;
       align-items: center;
       height: 40px;
-      width: 620px;
       background-color: brown;
 
       .content {
-        height: 25px;
-        width: 130px;
         background-color: chartreuse;
         margin-left: 20px;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
       }
 
       .user {
-        height: 25px;
-        width: 130px;
         background-color: coral;
         margin-left: 20px;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
       }
     } 
   }
