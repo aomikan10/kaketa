@@ -12,6 +12,7 @@
     height: 50px;
     width: 100vw;
     padding: 5px 40px;
+    background-color:rgba(0,0,0,0);
 
     .TitleSearch {
       display: flex;
@@ -19,12 +20,10 @@
       justify-content: space-between;
       height: 40px;
       width: 300px;
-      background-color: cornflowerblue;
 
       .SiteTitle {
         height: 40px;
         width: 200px;
-        background-color: ivory;
         font-family: 'Caveat', cursive;
         font-size: 40px;
         line-height: 40px;
@@ -33,7 +32,7 @@
       .SearchBox {
         height: 25px;
         width: 180px;
-        background-color: yellow;
+        //background-color: yellow;
       }
     }
 
@@ -41,6 +40,7 @@
       display: flex;
       align-items: center;
       height: 40px;
+      list-style: none;
 
       .content {
         margin-left: 40px;
@@ -58,21 +58,20 @@
   }
 
   .Body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: calc(100vh - 85px);
     width: 100vw;
-    background-color: darkgray;
-    padding: 40px;
+    //background-color: darkgray;
+    overflow: scroll;
+    padding: 50px 0 0 0;
 
     .Post {
       display: flex;
       justify-content: center;
-      height: 500px;
+      height: 580px;
       width: 1200px;
       background-color: white;
-      padding: 20px;
+      margin: 0 auto;
+      padding: 0 0 80px 0;
 
       .MoreTag {
         display: flex;
@@ -89,7 +88,7 @@
             height: 17px;
             margin-bottom: 5px;
             padding: 2px;
-            color: #dc143c;
+            color: lightgrey;
             text-align: center;
             line-height: 17px;
           }
@@ -110,9 +109,9 @@
       }
 
       .Text {
-        height: 450px;
-        width: 850px;
-        font-size: 22px;
+        height: 470px;
+        width: 848px;
+        font-size: 17px;
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
@@ -125,7 +124,7 @@
       }
 
       .DataBox {
-        height: 400px;
+        height: 500px;
         width: 50px;
         margin-left: 40px;
         //background-color: thistle;
@@ -168,7 +167,12 @@
           margin-left: auto;
           margin-right: auto;
           //background-color: tan;
+          text-align: center;
+          line-height: 30px;
+          font-size: 25px;
+          color: red;
         }
+ 
         .Comments {
           height: 30px;
           width: 30px;
@@ -176,6 +180,9 @@
           margin-left: auto;
           margin-right: auto;
           //background-color: skyblue;
+          text-align: center;
+          line-height: 30px;
+          font-size: 25px;
         }
       }
     }
@@ -184,8 +191,10 @@
   .Footer {
     height: 35px;
     width: 100vw;
-    background-color: lightskyblue;
+    //background-color: lightskyblue;
     text-align: center;
     line-height: 35px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Jura', sans-serif;
   }
 }
