@@ -44,17 +44,59 @@
 
       .content {
         margin-left: 40px;
+        position: relative;
         font-family: 'Caveat', cursive;
         font-family: 'Jura', sans-serif;
+        &::before{
+          content: attr(data);
+          display: block;
+        }
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #333;
+          transition: width 300ms;
+          width: 0;
+        }
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
       }
-
+    
       .user {
         margin-left: 40px;
         color: #dc143c;
+        position: relative;
         font-family: 'Caveat', cursive;
         font-family: 'Jura', sans-serif;
-      }
-    } 
+        &::before{
+          content: attr(data);
+          display: block;
+        }
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #dc143c;
+          transition: width 300ms;
+          width: 0;
+        }
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
+      } 
+    }
   }
 
   .Body {
@@ -70,27 +112,34 @@
       height: 580px;
       width: 1200px;
       background-color: white;
-      margin: 0 auto;
-      padding: 0 0 80px 0;
-
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+      
       .MoreTag {
         display: flex;
         justify-content: center;
+        margin-top: 35px;
         .Tags {
           height: 300px;
           width: 130px;
           margin-right: 20px;
+          margin-top: 10px;
           font-size: 13px;
           //background-color: yellow;
           font-family: 'Kosugi Maru', sans-serif;
           line-height: 25px;
           .Tag {
             height: 17px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             padding: 2px;
-            color: lightgrey;
+            color: #a9a9a9;
             text-align: center;
             line-height: 17px;
+            font-family: 'Caveat', cursive;
+            font-family: 'Jura', sans-serif;
+            font-family: 'Noto Serif JP', serif;
+
           }
         }
         .More {
@@ -108,31 +157,120 @@
         }
       }
 
-      .Text {
+      .Main {
+        height: 520px;
+        width: 800px;
+        //background-color: lightgreen;
+        .DateBox {
+          display: flex;
+          justify-content: start;
+          height: 20px;
+          width: 835px;
+          //background-color: lightpink;
+          margin-bottom: 15px;
+          padding-left: 10px;
+          .date {
+            color: #a9a9a9;
+            //background-color: lightsalmon;
+            line-height: 20px;
+            font-size: 14px;
+            font-family: 'Caveat', cursive;
+            font-family: 'Jura', sans-serif;
+            font-family: 'Noto Serif JP', serif;
+          }
+          .Likes {
+            height: 20px;
+            width: 20px;
+            //background-color: tan;
+            text-align: center;
+            line-height: 20px;
+            font-size: 18px;
+            color: red;
+            margin-left: 40px;
+          }
+          .Comments {
+            height: 20px;
+            width: 20px;
+            //background-color: skyblue;
+            text-align: center;
+            line-height: 20px;
+            font-size: 18px;
+            margin-left: 30px;
+          }
+          .Count {
+            font-size: 14px;
+            margin-left: 10px;
+            line-height: 20px;
+            color: #a9a9a9;
+          }
+        }
+        .Text {
+          height: 470px;
+          width: 770px;
+          font-size: 17px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          overflow: hidden;
+          //background-color: teal;
+          line-height: 40px;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+        }
+      }
+
+      $bar-style: solid; 
+      $bar-size: 2px;
+      $bar-color: #000000;
+
+      .CatchCopy {
         height: 470px;
-        width: 848px;
-        font-size: 17px;
+        width: 100px;
+        //background-color: mediumaquamarine;
+        margin-left: 30px;
+        margin-top: 35px;
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
-        overflow: hidden;
         font-family: 'Caveat', cursive;
         font-family: 'Jura', sans-serif;
         font-family: 'Noto Serif JP', serif;
-        //background-color: teal;
+        padding: 30px;
+        position: relative;
         line-height: 40px;
+        color: #a9a9a9;
+        font-size: 15px;
+        &::before, &::after {
+          content:'';
+          width: 20px;
+          height: 20px;
+          position: absolute;
+        }
+        &::before {
+          border-left: $bar-style $bar-size $bar-color;
+          border-top: $bar-style $bar-size $bar-color;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          border-right: $bar-style $bar-size $bar-color;
+          border-bottom: $bar-style $bar-size $bar-color;
+          bottom: 0;
+          right: 0;
+        }
       }
 
       .DataBox {
         height: 500px;
         width: 50px;
-        margin-left: 40px;
         //background-color: thistle;
         .Title {
           height: 150px;
           width: 50px;
           margin-left: auto;
           margin-right: auto;
+          margin-top: 35px;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -160,30 +298,7 @@
           font-size: 20px;
           //background-color: wheat;
         }
-        .Likes {
-          height: 30px;
-          width: 30px;
-          margin-top: 10px;
-          margin-left: auto;
-          margin-right: auto;
-          //background-color: tan;
-          text-align: center;
-          line-height: 30px;
-          font-size: 25px;
-          color: red;
-        }
- 
-        .Comments {
-          height: 30px;
-          width: 30px;
-          margin-top: 5px;
-          margin-left: auto;
-          margin-right: auto;
-          //background-color: skyblue;
-          text-align: center;
-          line-height: 30px;
-          font-size: 25px;
-        }
+        
       }
     }
   }
