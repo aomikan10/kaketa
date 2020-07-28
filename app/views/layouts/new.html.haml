@@ -1,0 +1,15 @@
+.Resistration
+  %h1 kaketa.
+  %h2 join us!
+    = form_with model: @user do |f|
+          = f.label :name
+          = f.text_field :name, autofocus: true
+          = f.label :email
+          = f.text_field :email, autofocus: true
+          = f.label :password
+          = f.text_field :password, autofocus: true
+          = f.label :passwordconfirm
+          = f.text_field :passwordconfirm, autofocus: true
+        = f.submit "SEND", class: 'Button UserButton'
+.footer
+  ©︎ 2020 kaketa from Mika.F
