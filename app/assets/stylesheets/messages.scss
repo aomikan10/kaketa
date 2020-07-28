@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100vw;
+    padding: 5px 40px;
+    background-color:rgba(0,0,0,0);
+
+    .TitleSearch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      width: 300px;
+
+      .SiteTitle {
+        height: 40px;
+        width: 200px;
+        font-family: 'Caveat', cursive;
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      .SearchBox {
+        height: 25px;
+        width: 180px;
+        //background-color: yellow;
+      }
+    }
+
+    .Contents {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      list-style: none;
+
+      .content {
+        margin-left: 40px;
+        position: relative;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
+        &::before{
+          content: attr(data);
+          display: block;
+        }
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #333;
+          transition: width 300ms;
+          width: 0;
+        }
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
+      }
+    
+      .user {
+        margin-left: 40px;
+        color: #dc143c;
+        position: relative;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
+        &::before{
+          content: attr(data);
+          display: block;
+        }
+        &::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #dc143c;
+          transition: width 300ms;
+          width: 0;
+        }
+        &:hover{
+          &::after{
+            width: 100%;
+          }
+        }
+      } 
+    }
+  }
+
+  .Body {
+    height: calc(100vh - 85px);
+    width: 100vw;
+    //background-color: darkgray;
+    overflow: scroll;
+    padding: 50px 0 0 0;
+
+    .Post {
+      display: flex;
+      justify-content: center;
+      height: 580px;
+      width: 1200px;
+      background-color: white;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+      
+      .MoreTag {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        .Tags {
+          height: 300px;
+          width: 130px;
+          margin-right: 20px;
+          margin-top: 10px;
+          font-size: 13px;
+          //background-color: yellow;
+          font-family: 'Kosugi Maru', sans-serif;
+          line-height: 25px;
+          .Tag {
+            height: 17px;
+            margin-bottom: 10px;
+            padding: 2px;
+            color: #a9a9a9;
+            text-align: center;
+            line-height: 17px;
+            font-family: 'Caveat', cursive;
+            font-family: 'Jura', sans-serif;
+            font-family: 'Noto Serif JP', serif;
+
+          }
+        }
+        .More {
+          height: 300px;
+          width: 30px;
+          margin-right: 10px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          //background-color: yellowgreen;
+      
+        }
+      }
+
+      .Main {
+        height: 520px;
+        width: 800px;
+        //background-color: lightgreen;
+        .DateBox {
+          display: flex;
+          justify-content: start;
+          height: 20px;
+          width: 835px;
+          //background-color: lightpink;
+          margin-bottom: 15px;
+          padding-left: 20px;
+          .date {
+            color: #a9a9a9;
+            //background-color: lightsalmon;
+            line-height: 20px;
+            font-size: 14px;
+            font-family: 'Caveat', cursive;
+            font-family: 'Jura', sans-serif;
+            font-family: 'Noto Serif JP', serif;
+          }
+          .Likes {
+            height: 20px;
+            width: 20px;
+            //background-color: tan;
+            text-align: center;
+            line-height: 20px;
+            font-size: 18px;
+            color: red;
+            margin-left: 40px;
+          }
+          .Comments {
+            height: 20px;
+            width: 20px;
+            //background-color: skyblue;
+            text-align: center;
+            line-height: 20px;
+            font-size: 18px;
+            margin-left: 30px;
+          }
+          .Count {
+            font-size: 14px;
+            margin-left: 10px;
+            line-height: 20px;
+            color: #a9a9a9;
+          }
+        }
+        .Text {
+          height: 470px;
+          width: 770px;
+          font-size: 17px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          overflow: hidden;
+          //background-color: teal;
+          line-height: 40px;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+        }
+      }
+
+      $bar-style: solid; 
+      $bar-size: 2px;
+      $bar-color: #000000;
+
+      .CatchCopy {
+        height: 470px;
+        width: 100px;
+        //background-color: mediumaquamarine;
+        margin-left: 30px;
+        margin-top: 35px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        font-family: 'Caveat', cursive;
+        font-family: 'Jura', sans-serif;
+        font-family: 'Noto Serif JP', serif;
+        padding: 30px;
+        position: relative;
+        line-height: 40px;
+        color: #a9a9a9;
+        font-size: 15px;
+        &::before, &::after {
+          content:'';
+          width: 20px;
+          height: 20px;
+          position: absolute;
+        }
+        &::before {
+          border-left: $bar-style $bar-size $bar-color;
+          border-top: $bar-style $bar-size $bar-color;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          border-right: $bar-style $bar-size $bar-color;
+          border-bottom: $bar-style $bar-size $bar-color;
+          bottom: 0;
+          right: 0;
+        }
+      }
+
+      .DataBox {
+        height: 500px;
+        width: 50px;
+        //background-color: thistle;
+        .Title {
+          height: 150px;
+          width: 50px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 35px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          font-size: 30px;
+          line-height: 50px;
+          //background-color: tomato;
+      
+        }
+        .WriterName {
+          height: 150px;
+          width: 40px;
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+          line-height: 40px;
+          font-size: 20px;
+          //background-color: wheat;
+        }
+        
+      }
+    }
+  }
+
+  .Footer {
+    height: 35px;
+    width: 100vw;
+    //background-color: lightskyblue;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Jura', sans-serif;
+  }
+}
