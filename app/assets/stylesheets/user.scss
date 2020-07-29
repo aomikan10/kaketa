@@ -1,40 +1,60 @@
 .AccountPage {
-  width: 980px;
+  width: 650px;
   margin: 60px auto;
   padding: 60px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  $bar-style: solid; 
+  $bar-size: 2px;
+  $bar-color: #000000;
+  
+  &::before, &::after {
+    content:'';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  &::before {
+    border-left: $bar-style $bar-size $bar-color;
+    border-top: $bar-style $bar-size $bar-color;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    border-right: $bar-style $bar-size $bar-color;
+    border-bottom: $bar-style $bar-size $bar-color;
+    bottom: 0;
+    right: 0;
+  }
 }
 .AccountPage__title {
   width: 50%;
   font-size: 14px;
   font-weight: 200;
+  margin: 0 auto;
+  text-align: center;
 
   h2 {
     margin-bottom: 10px;
     letter-spacing: 3px;
-    font-size: 40px;
-    &:after {
-      content: "";
-      display: block;
-      width: 60px;
-      margin-top: 5px;
-      border-bottom: 1px solid #38aef0;
-    }
+    font-size: 60px;
+    font-family: 'Caveat', cursive;
   }
 
   .Button {
-    margin-top: 40px;
+    margin-top: 20px;
     color: #fff;
     background-color: #ccc;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .AccountPage__form {
-  width: 50%;
+  width: 70%;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .FormField {
@@ -87,14 +107,23 @@
   border: none;
   border-radius: 2px;
   text-decoration: none;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.UserButton {
-  margin-top: 20px;
-  color: #fff;
-  background-color: #38aef0;
-}
+.actions {
+  display: flex;
+  align-items: center;
 
+  .UserButton {
+    margin-top: 30px;
+    color: #fff;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 #error_explanation {
   margin: 20px 0;
   padding: 20px 30px;
@@ -118,4 +147,14 @@
     padding: 0;
     font-size: 13px;
   }
+}
+
+.Footer {
+  height: 35px;
+  width: 100vw;
+  //background-color: lightskyblue;
+  text-align: center;
+  line-height: 35px;
+  font-family: 'Caveat', cursive;
+  font-family: 'Jura', sans-serif;
 }
