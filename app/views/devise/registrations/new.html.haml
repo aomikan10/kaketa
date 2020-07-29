@@ -1,7 +1,7 @@
 .AccountPage
   .AccountPage__title
-    %h2 Create Account
-    %h5 新規アカウントの作成
+    %h2 KAKETA.
+    %h5 - create your account -
     = render "devise/shared/links"
   .AccountPage__form
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -28,4 +28,7 @@
         .FormField__input--normal
           = f.password_field :password_confirmation, autocomplete: "off"
       .actions
-        = f.submit "Create Account", class: 'Button UserButton'
+        = f.submit "Join us！", class: 'Button UserButton'
+.Footer
+  ©︎ KAKETA. From Mika.F
+
