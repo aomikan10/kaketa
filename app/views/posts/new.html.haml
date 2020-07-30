@@ -1,0 +1,29 @@
+.wrapper
+  = render "header"
+  .AccountPage
+    .AccountPage__title
+      %h5 - create your story -
+    .AccountPage__form
+      = form_for(@post) do |f|
+        .FormField
+          .FormField__label--normal
+            = f.label :title
+          .FormField__input--normal
+            = f.text_field :title, autofocus: true
+        .FormField
+          .FormField__label--normal
+            = f.label :catchcopy
+          .FormField__input--normal
+            = f.text_field :copy
+        .FormField
+          .FormField__label--normal
+            = f.label :text
+          .FormField__input--normal
+            = f.text_area :text, rows:10, cols:39.5
+        .actions
+          = f.submit "SEND", class: 'Button UserButton'
+  .Footer
+    ©︎ KAKETA. From Mika.F
+
+
+
