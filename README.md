@@ -14,7 +14,7 @@ has_many :post
 |Column|Type|Options|
 |------|----|-------|
 |title|string|null: false|
-|text|string|null: false|
+|text|text|null: false|
 |user_id|string|null: false, foreign_key: true|
 |like_id|string|foreign_key: true|
 |tag_id|string|foreign_key: true|

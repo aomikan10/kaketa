@@ -22,6 +22,12 @@
       width: 300px;
 
       .SiteTitle {
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        
         height: 40px;
         width: 200px;
         font-family: 'Caveat', cursive;
@@ -43,6 +49,12 @@
       list-style: none;
 
       .content {
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
         margin-left: 40px;
         position: relative;
         font-family: 'Caveat', cursive;
@@ -318,4 +330,3 @@
     font-family: 'Jura', sans-serif;
   }
 }
-
