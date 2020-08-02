@@ -170,6 +170,11 @@
           font-family: 'Jura', sans-serif;
           font-family: 'Noto Serif JP', serif;
           //background-color: yellowgreen;
+
+          a {
+            text-decoration: none;
+            color: #a9a9a9;
+          }
       
         }
       }
@@ -229,6 +234,20 @@
           -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
           overflow: hidden;
+          //background-color: teal;
+          line-height: 40px;
+          font-family: 'Caveat', cursive;
+          font-family: 'Jura', sans-serif;
+          font-family: 'Noto Serif JP', serif;
+        }
+        .TextAll {
+          height: 470px;
+          width: 770px;
+          font-size: 17px;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          overflow: scroll;
           //background-color: teal;
           line-height: 40px;
           font-family: 'Caveat', cursive;
