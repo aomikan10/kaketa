@@ -274,7 +274,7 @@
         font-family: 'Noto Serif JP', serif;
         padding: 30px;
         position: relative;
-        line-height: 40px;
+        line-height: 30px;
         color: #a9a9a9;
         font-size: 15px;
         &::before, &::after {
@@ -298,11 +298,12 @@
       }
 
       .DataBox {
+        display: flex;
         height: 500px;
-        width: 50px;
+        width: 100px;
         //background-color: thistle;
         .Title {
-          height: 150px;
+          height: 465px;
           width: 50px;
           margin-left: auto;
           margin-right: auto;
@@ -321,7 +322,7 @@
         .WriterName {
           height: 150px;
           width: 40px;
-          margin-top: 20px;
+          margin-top: 35px;
           margin-left: auto;
           margin-right: auto;
           -webkit-writing-mode: vertical-rl;
@@ -331,8 +332,12 @@
           font-family: 'Jura', sans-serif;
           font-family: 'Noto Serif JP', serif;
           line-height: 40px;
-          font-size: 20px;
+          font-size: 18px;
           //background-color: wheat;
+          a {
+            text-decoration: none;
+            color: #a9a9a9;
+          }
         }
         
       }
