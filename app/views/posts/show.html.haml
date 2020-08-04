@@ -1,5 +1,6 @@
-.Body
-  - @posts.each do |post|
+.wrapper
+  = render "header"
+  .Body
     .Post
       .MoreTag
         .Tags
@@ -9,13 +10,11 @@
             "# ウサギ"
           .Tag
             "# 青空文庫"
-        .More
-          = link_to '… 続きを読む', post_path(post.id), method: :get 
       .Main
         .DateBox
           .date
             投稿:
-            = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+            = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
           .Likes
             = icon('fas', 'heart')
           .Count
@@ -24,14 +23,14 @@
             = icon('far', 'comment')
           .Count
             2
-        .Text
-          = post.text
+        .TextAll
+          = @post.text
       .DataBox
         .WriterName
-          = link_to post.user.name, user_path(post.user_id), method: :get
+          = @post.user.name
         .Title
-          = post.title
+          = @post.title
       .CatchCopy
-        = post.copy
-.Footer
-  ©︎ KAKETA. From Mika.F
+        = @post.copy
+  .Footer
+    ©︎ KAKETA. From Mika.F
