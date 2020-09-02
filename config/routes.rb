@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   
   resources :posts, only: [:index, :new, :create]
+    resources :favorites, only: [:index, :create, :destroy]
 end
