@@ -1,0 +1,36 @@
+.wrapper
+  = render "header"
+  .Body
+    .Post
+      .MoreTag
+        .Tags
+          .Tag
+            "# 宮沢賢治"
+          .Tag
+            "# ウサギ"
+          .Tag
+            "# 青空文庫"
+      .Main
+        .DateBox
+          .date
+            投稿:
+            = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+          .Likes
+            = icon('fas', 'heart')
+          .Count
+            14
+          .Comments
+            = icon('far', 'comment')
+          .Count
+            2
+        .TextAll
+          = @post.text
+      .DataBox
+        .WriterName
+          = @post.user.name
+        .Title
+          = @post.title
+      .CatchCopy
+        = @post.copy
+  .Footer
+    ©︎ KAKETA. From Mika.F

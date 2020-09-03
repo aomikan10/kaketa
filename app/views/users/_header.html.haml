@@ -1,0 +1,17 @@
+.Header
+  .TitleSearch
+    .SiteTitle
+      = link_to root_path do
+        KAKETA.
+    .SearchBox
+  %ul.Contents
+    %li.content
+      = link_to new_post_path(current_user) do
+        WRITE
+    %li.content
+      FAVORITE
+    %li.content
+      DM
+    %li.user
+      =link_to edit_user_path(current_user) do
+        = current_user.name

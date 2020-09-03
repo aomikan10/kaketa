@@ -10,7 +10,7 @@
           .Tag
             "# 青空文庫"
         .More
-          … 続きを読む
+          = link_to '… 続きを読む', post_path(post.id), method: :get 
       .Main
         .DateBox
           .date
@@ -27,10 +27,10 @@
         .Text
           = post.text
       .DataBox
+        .WriterName
+          = link_to post.user.name, user_path(post.user_id), method: :get
         .Title
           = post.title
-        .WriterName
-          = post.user.name
       .CatchCopy
         = post.copy
 .Footer
