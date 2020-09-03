@@ -1,0 +1,44 @@
+.wrapper
+  =render "posts/header"
+  - if current_user.like_posts.present?
+    .Body
+      - @post.each do |post|
+        .Post
+          .MoreTag
+            .Tags
+              .Tag
+                "# 宮沢賢治"
+              .Tag
+                "# ウサギ"
+              .Tag
+                "# 青空文庫"
+            .More
+              = link_to '… 続きを読む', post_path(post.id), method: :get 
+          .Main
+            .DateBox
+              .date
+                投稿:
+                = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+              .Likes
+                = icon('fas', 'heart')
+              .Count
+                = post.likes.count
+              .Comments
+                = icon('far', 'comment')
+              .Count
+                2
+            .Text
+              = post.text
+          .DataBox
+            .WriterName
+              = link_to post.user.name, user_path(post.user_id), method: :get
+            .Title
+              = post.title
+          .CatchCopy
+            = post.copy
+  - else
+    .Body
+      .none
+        いいねした投稿はありません。
+  .Footer
+    ©︎ KAKETA. From Mika.F
