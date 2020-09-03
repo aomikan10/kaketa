@@ -3,5 +3,6 @@ class Post < ApplicationRecord
 
   validates :title, :text, :copy, :user_id, presence: true
   has_many :likes
-  has_many :user_likes, through :likes
+  has_many :user_likes, through: :likes
+
 end

@@ -8,5 +8,5 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :likes
-  has_many :post_likes, through :likes
+  has_many :post_likes, through: :likes
 end
