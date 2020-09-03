@@ -209,6 +209,12 @@
             font-size: 18px;
             color: red;
             margin-left: 40px;
+            a#like_button {
+            color: #a9a9a9;
+            }
+            a#liked_button {
+            color: red;
+            }
           }
           .Comments {
             height: 20px;
