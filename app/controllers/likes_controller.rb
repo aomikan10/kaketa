@@ -2,6 +2,10 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post
 
+  def index
+    @post = current_user.like_posts
+  end
+
   def create
     @like = Like.new(
       user_id: current_user.id,
