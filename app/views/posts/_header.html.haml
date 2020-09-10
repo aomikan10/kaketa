@@ -9,7 +9,8 @@
       = link_to new_post_path(current_user) do
         WRITE
     %li.content
-      FAVORITE
+      = link_to post_likes_path(current_user) do
+        FAVORITE
     %li.content
       DM
     %li.user
