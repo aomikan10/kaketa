@@ -7,4 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   has_many :posts
+  has_many :likes
+  has_many :like_posts, through: :likes, source: :post
+  has_many :comments
 end
