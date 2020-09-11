@@ -20,7 +20,8 @@
           .Count
             = @post.likes.count
           .Comments
-            = icon('far', 'comment')
+            = link_to new_post_comment_path(@post.id) do
+              = icon('far', 'comment')
           .Count
             2
         .TextAll

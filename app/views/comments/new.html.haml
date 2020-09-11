@@ -1,0 +1,27 @@
+.wrapper
+  = render "posts/header"
+  .AccountPage
+    .AccountPage__title
+      %h5 - comment -
+    .AccountPage__form
+      = form_with(model: [@post, @comment], local: true) do |f|
+        .FormField
+          .FormField__label--normal
+            = f.label :text
+          .FormField__input--normal
+            = f.text_area :text, rows:3, cols:39.5
+        .actions
+          = f.submit "SEND", class: 'Button UserButton'
+        - if @comments
+          .comment_area
+            - @comments.each do |comment|
+              %p.comment_body
+                %strong
+                  = link_to comment.user.name, "/users/#{comment.user_id}"
+                  ：
+                  = comment.text
+              %p.comment_date
+                = l comment.created_at
+
+  .Footer
+    ©︎ KAKETA. From Mika.F
