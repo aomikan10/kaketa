@@ -6,8 +6,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.create!(comment_params)
-    redirect_to "/posts/#{comment.post.id}"
+    if user_signed_in?
+      comment = Comment.create!(comment_params)
+      redirect_to "/posts/#{comment.post.id}"
+    else
+      redirect_to "/posts/#{comment.post.id}"
+    end
   end
 
   private
