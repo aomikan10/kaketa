@@ -1,8 +1,8 @@
 - if Like.find_by(user_id: current_user.id, post_id: @post.id)
   .liked
-    = link_to(post_like_path(@post, post.id), method: :delete, remote: true, id: :"liked_button") do
+    = link_to post_like_path(@post, post.id), method: :delete, remote: true, id: "liked_button" do
       = icon('fas', 'heart')
 - else
   .like
-    = link_to(post_likes_path(@post), method: :post, remote: true, id: :"like_button") do
+    = link_to post_likes_path(@post), method: :post, remote: true, id: "like_button" do
       = icon('far', 'heart')
