@@ -201,8 +201,9 @@
             font-family: 'Noto Serif JP', serif;
           }
           .Likes {
+            display: flex;
+            justify-content: start;
             height: 20px;
-            width: 20px;
             //background-color: tan;
             text-align: center;
             line-height: 20px;
@@ -214,6 +215,12 @@
             }
             a#liked_button {
             color: red;
+            }
+            .Count {
+              font-size: 14px;
+              margin-left: 10px;
+              line-height: 20px;
+              color: #a9a9a9;
             }
           }
           .Comments {
@@ -228,12 +235,7 @@
               color: #a9a9a9;
             }
           }
-          .Count {
-            font-size: 14px;
-            margin-left: 10px;
-            line-height: 20px;
-            color: #a9a9a9;
-          }
+          
         }
         .Text {
           height: 470px;
