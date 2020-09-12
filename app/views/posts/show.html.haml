@@ -17,6 +17,8 @@
             = @post.created_at.strftime("%Y年%m月%d日 %H時%M分")
           .Likes
             = render partial: 'likes/like', locals: { post: @post}
+          .Count
+            = @post.likes.count
           .Comments
             = link_to new_post_comment_path(@post.id) do
               = icon('far', 'comment')
