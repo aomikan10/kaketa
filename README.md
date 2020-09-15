@@ -25,16 +25,6 @@ has_many :posts_tags
 has_many :tags , through :posts_tags
 belongs_to :user
 
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|string|null: false|
-|user_id|string|null: false, foreign_key: true|
-|post_id|string|null: false, foreign_key: true|
-### Association
-has_many :posts_tags
-has_many :posts, through :posts_tags
-
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -44,11 +34,9 @@ has_many :posts, through :posts_tags
 belongs_to :post
 belongs_to :user
 
-## posts_tagsテーブル
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|tag_id|string|null: false, foreign_key: true|
-|post_id|string|null: false, foreign_key: true|
-### Association
-belongs_to :post
-belongs_to :tag
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+|text|text||
