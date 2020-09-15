@@ -17,6 +17,18 @@
 - 色数を減らし、白背景に黒の文字が映えるよう配色した(白、黒、赤のみ)
 - 明朝体で、文庫本を開いた時のような感覚で読めるようにしたかった
 ![276794e3429d215d1a091559ea923be5](https://user-images.githubusercontent.com/67635291/93159850-1f1f3180-f74a-11ea-8de0-70877fa55d13.png)
+# 主な使用技術
+- ruby
+- ruby on rails
+- Haml
+- scss
+- jquery
+- heroku
+# 実装したい機能、今後の課題
+- タグ機能の完成
+- DM機能
+- ユーザーをお気に入りできる機能
+- コミュニティ(グループ機能)の追加
 # kaketa DB設計
 ## usersテーブル
 |Column|Type|Options|
