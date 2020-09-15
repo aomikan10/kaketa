@@ -6,4 +6,6 @@ class Post < ApplicationRecord
   has_many :like_users, through: :likes, source: :user
   has_many :comments
 
+  acts_as_taggable
+
 end
