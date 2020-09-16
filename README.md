@@ -10,7 +10,6 @@
 ### URL
 - https://kaketa.herokuapp.com/
 ### テストアカウント
-- ユーザー名：tes
 - メールアドレス：aaaa@gmail.com
 - パスワード：1111111k
 # 製作意図
