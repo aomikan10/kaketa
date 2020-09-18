@@ -37,9 +37,10 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-has_many :likes
-has_many :posts, through :likes
-has_many :post
+- has_many :likes
+- has_many :posts, through :likes
+- has_many :posts
+- has_many :comments
 
 ## postsテーブル
 |Column|Type|Options|
@@ -50,11 +51,11 @@ has_many :post
 |like_id|string|foreign_key: true|
 |tag_id|string|foreign_key: true|
 ### Association
-has_many :likes
-has_many :users, through :likes
-has_many :posts_tags
-has_many :tags , through :posts_tags
-belongs_to :user
+- has_many :likes
+- has_many :users, through :likes
+- has_many :posts_tags
+- has_many :tags , through :posts_tags
+- belongs_to :user
 
 ## likesテーブル
 |Column|Type|Options|
@@ -62,8 +63,8 @@ belongs_to :user
 |user_id|string|null: false, foreign_key: true|
 |post_id|string|null: false, foreign_key: true|
 ### Association
-belongs_to :post
-belongs_to :user
+- belongs_to :post
+- belongs_to :user
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -71,3 +72,6 @@ belongs_to :user
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
 |text|text||
+### Association
+- belongs_to :post
+- belongs_to :user
