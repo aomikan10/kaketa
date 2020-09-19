@@ -151,12 +151,15 @@
             margin-bottom: 10px;
             padding: 2px;
             color: #a9a9a9;
-            text-align: center;
             line-height: 17px;
             font-family: 'Caveat', cursive;
             font-family: 'Jura', sans-serif;
             font-family: 'Noto Serif JP', serif;
-
+            &:before {
+              // font-family: "Font Awesome 5 Free";
+              content: "＃";
+              // font-weight: 600;
+            }
           }
         }
         .More {
