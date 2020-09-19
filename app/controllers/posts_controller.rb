@@ -5,6 +5,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC")
     @post = Post.find_by(params[:id])
+    if params[:tag_name]
+      @posts = Post.tagged_with("#{params[:tag_name]}").order("created_at DESC")
+    end
   end
 
   def new
@@ -16,6 +19,7 @@ class PostsController < ApplicationController
     @post.user = current_user
     @post.title = params[:post][:title]
     @post.copy = params[:post][:copy]
+    @post.tag_list = params[:post][:tag_list]
     @post.text = params[:post][:text]
     @post.save
     redirect_to root_path
@@ -27,7 +31,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :copy, :text).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :copy, :text, :tag_list).merge(user_id: current_user.id)
   end
 
 end
