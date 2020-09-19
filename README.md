@@ -56,6 +56,7 @@
 - has_many :posts_tags
 - has_many :tags , through :posts_tags
 - belongs_to :user
+- acts_as_taggable
 
 ## likesテーブル
 |Column|Type|Options|
@@ -75,3 +76,26 @@
 ### Association
 - belongs_to :post
 - belongs_to :user
+
+# tagsテーブル
+※acts-as-taggable-onにより生成。
+
+|Column|Type|Options|
+|------|----|-------|
+|name|text|null: false, foreign_key: true, unique: true|
+|taggings_count|integer| |
+
+### Association
+- belongs_to :tagging
+
+# taggingsテーブル
+※acts-as-taggable-onにより生成。
+
+|Column|Type|Options|
+|------|----|-------|
+|tag_id|integer|foreign_key: true|
+|taggable_type|text|null: false|
+|taggable_id|integer|foreign_key: true|
+
+### Assosiation
+- has_many :tags
