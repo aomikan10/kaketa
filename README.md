@@ -77,7 +77,7 @@
 - belongs_to :post
 - belongs_to :user
 
-# tagsテーブル
+## tagsテーブル
 ※acts-as-taggable-onにより生成。
 
 |Column|Type|Options|
@@ -88,7 +88,7 @@
 ### Association
 - belongs_to :tagging
 
-# taggingsテーブル
+## taggingsテーブル
 ※acts-as-taggable-onにより生成。
 
 |Column|Type|Options|
