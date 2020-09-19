@@ -1,3 +1,4 @@
 - tag_list.each do |tag|
   .Tag
-    = tag
+    = link_to posts_path(tag_name: tag) do
+      = tag

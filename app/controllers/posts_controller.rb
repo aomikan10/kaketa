@@ -5,6 +5,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC")
     @post = Post.find_by(params[:id])
+    if params[:tag_name]
+      @posts = Post.tagged_with("#{params[:tag_name]}").order("created_at DESC")
+    end
   end
 
   def new

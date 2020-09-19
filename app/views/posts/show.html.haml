@@ -4,12 +4,7 @@
     .Post
       .MoreTag
         .Tags
-          .Tag
-            "# 宮沢賢治"
-          .Tag
-            "# ウサギ"
-          .Tag
-            "# 青空文庫"
+          = render 'posts/tag_list', tag_list: @post.tag_list
       .Main
         .DateBox
           .date
