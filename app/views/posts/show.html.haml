@@ -19,6 +19,10 @@
               = icon('far', 'comment')
           .Count
             = @post.comments.count
+          - if user_signed_in? && current_user.id == @post.user_id
+            .Delete
+              = link_to post_path(@post), method: :delete do
+                = icon('far', 'trash-alt')
         .TextAll
           = @post.text
       .DataBox
